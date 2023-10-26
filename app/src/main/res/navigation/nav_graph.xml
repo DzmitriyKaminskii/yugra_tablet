@@ -7,16 +7,8 @@
 
     <fragment
         android:id="@+id/navFragment"
-        android:name="com.vlr.dk.yugratablet.NavFragment"
+        android:name="com.vlr.dk.yugratablet.HomeFragment"
         android:label="fragment_nav"
-        tools:layout="@layout/fragment_nav" >
-        <action
-            android:id="@+id/action_navFragment_to_testFragment"
-            app:destination="@id/testFragment" />
+        tools:layout="@layout/home_fragment" >
     </fragment>
-    <fragment
-        android:id="@+id/testFragment"
-        android:name="com.vlr.dk.yugratablet.TestFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
 </navigation>
