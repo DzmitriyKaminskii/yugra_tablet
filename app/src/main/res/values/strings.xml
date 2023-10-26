@@ -2,5 +2,11 @@
     <string name="app_name">Yugra tablet</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home_screen">Home Screen</string>
-    <string name="test_screen">Test Screen</string>
+
+    <string name="home_screen_yugre">ЮГРЕ</string>
+    <string name="home_screen_life">ЖИТЬ В </string>
+    <string name="home_screen_rest">ОТДЫХАТЬ В </string>
+    <string name="home_screen_work">РАБОТАТЬ В </string>
+
+
 </resources>
