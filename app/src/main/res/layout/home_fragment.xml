@@ -26,8 +26,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/home_screen_life"
-                android:textSize="90dp" />
+                android:text="@string/home_screen_life"/>
 
         </LinearLayout>
 
@@ -44,8 +43,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/home_screen_rest"
-                android:textSize="90dp" />
+                android:text="@string/home_screen_rest" />
         </LinearLayout>
 
         <LinearLayout
@@ -61,8 +59,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/home_screen_work"
-                android:textSize="90dp" />
+                android:text="@string/home_screen_work" />
         </LinearLayout>
 
 

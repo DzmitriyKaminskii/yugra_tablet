@@ -7,6 +7,10 @@ android {
     namespace = "com.vlr.dk.yugratablet"
     compileSdk = 28
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.vlr.dk.yugratablet"
         minSdk = 24
