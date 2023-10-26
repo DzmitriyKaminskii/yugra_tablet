@@ -1,0 +1,1 @@
+# yugra_tablet
