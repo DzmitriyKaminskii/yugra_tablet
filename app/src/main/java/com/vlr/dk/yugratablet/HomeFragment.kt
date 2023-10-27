@@ -7,6 +7,7 @@ import android.text.style.AbsoluteSizeSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 
@@ -25,6 +26,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        updateTitles()
+        bindingClicks()
+    }
+
+    private fun updateTitles() {
         val yugraString = resources.getString(R.string.home_screen_yugre)
 
         binding.lifeTextView.text = SpannableStringBuilder()
@@ -65,7 +71,18 @@ class HomeFragment : Fragment() {
                 AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_yugre_size)),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
+    }
 
+    private fun bindingClicks() {
+        binding.lifeBlock.setOnClickListener {
+            Toast.makeText(context, "LIFE", Toast.LENGTH_LONG).show()
+        }
+        binding.restBlock.setOnClickListener {
+            Toast.makeText(context, "REST", Toast.LENGTH_LONG).show()
+        }
+        binding.workBlock.setOnClickListener {
+            Toast.makeText(context, "WORK", Toast.LENGTH_LONG).show()
+        }
     }
 
 }
