@@ -10,4 +10,14 @@
 
     <string name="back_button_text">Назад</string>
 
+    <string name="life_screen_cat_construction">Строительство</string>
+    <string name="life_screen_cat_medicine">Медицина</string>
+    <string name="life_screen_cat_sports">Спорт</string>
+    <string name="life_screen_cat_transport">Транспорт</string>
+    <string name="life_screen_cat_training">Обучение</string>
+    <string name="life_screen_cat_children">Дети</string>
+
+    <string name="rest_screen_cat_tourism">Туризм</string>
+    <string name="rest_screen_cat_culture">Культура</string>
+
 </resources>

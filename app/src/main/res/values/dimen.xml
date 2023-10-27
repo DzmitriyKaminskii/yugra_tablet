@@ -11,4 +11,5 @@
     <dimen name="back_button_top_margin">20dp</dimen>
 
     <dimen name="security_button_size">20dp</dimen>
+    <dimen name="sub_cat_margin_top_bottom">50dp</dimen>
 </resources>

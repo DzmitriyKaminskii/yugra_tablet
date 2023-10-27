@@ -2,17 +2,155 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#aa0000">
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/constructionBlock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#aa0000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/constructionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/life_screen_cat_construction" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/medicineBlock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0000aa"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/medicineTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/life_screen_cat_medicine" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sportsBlock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#aaaa00"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sportsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/life_screen_cat_sports" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/transportBlock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0000aa"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/transportTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/sub_cat_margin_top_bottom"
+                    android:gravity="top|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/life_screen_cat_transport" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trainingBlock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#aaaa00"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/trainingTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/sub_cat_margin_top_bottom"
+                    android:gravity="top|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/life_screen_cat_training" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/childrenBlock"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#aa0000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/childrenTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/sub_cat_margin_top_bottom"
+                    android:gravity="top|center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/life_screen_cat_children" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/backAction"
         android:layout_width="@dimen/back_button_width"
         android:layout_height="@dimen/back_button_height"
+        android:layout_marginStart="@dimen/back_button_start_margin"
+        android:layout_marginTop="@dimen/back_button_top_margin"
         android:text="@string/back_button_text"
         android:textSize="@dimen/back_button_text_size"
-        android:layout_marginTop="@dimen/back_button_top_margin"
-        android:layout_marginStart="@dimen/back_button_start_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
