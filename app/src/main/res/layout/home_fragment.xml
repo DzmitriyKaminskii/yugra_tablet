@@ -28,7 +28,7 @@
                 android:layout_marginTop="@dimen/home_screen_title_margin_top"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/home_screen_life"/>
+                android:text="@string/home_screen_life" />
 
         </LinearLayout>
 
@@ -75,8 +75,7 @@
         android:id="@+id/security_button"
         android:layout_width="@dimen/security_button_size"
         android:layout_height="@dimen/security_button_size"
-        android:background="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
