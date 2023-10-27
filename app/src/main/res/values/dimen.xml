@@ -9,4 +9,6 @@
     <dimen name="back_button_height">50dp</dimen>
     <dimen name="back_button_start_margin">20dp</dimen>
     <dimen name="back_button_top_margin">20dp</dimen>
+
+    <dimen name="security_button_size">20dp</dimen>
 </resources>

@@ -1,19 +1,30 @@
-package com.vlr.dk.yugratablet
+package com.vlr.dk.yugratablet.screens
 
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import android.text.style.AbsoluteSizeSpan
+import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.vlr.dk.yugratablet.R
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
+import com.vlr.dk.yugratablet.gesture.CustomGestureListener
 
 class HomeFragment : Fragment() {
     private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var gestureDetector: GestureDetector
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        gestureDetector = GestureDetector(activity, CustomGestureListener(activity))
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -87,6 +98,10 @@ class HomeFragment : Fragment() {
         }
         binding.workBlock.setOnClickListener {
             it.findNavController().navigate(R.id.action_open_workFragment)
+        }
+
+        binding.securityButton.setOnTouchListener { _, event ->
+            gestureDetector.onTouchEvent(event)
         }
     }
 

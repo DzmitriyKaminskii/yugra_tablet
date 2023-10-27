@@ -71,4 +71,12 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/security_button"
+        android:layout_width="@dimen/security_button_size"
+        android:layout_height="@dimen/security_button_size"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
