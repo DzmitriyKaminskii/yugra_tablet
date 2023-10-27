@@ -12,9 +12,9 @@ import androidx.fragment.app.Fragment
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 
 class HomeFragment : Fragment() {
-
     private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -83,6 +83,11 @@ class HomeFragment : Fragment() {
         binding.workBlock.setOnClickListener {
             Toast.makeText(context, "WORK", Toast.LENGTH_LONG).show()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }
