@@ -21,6 +21,7 @@ class HomeFragment : Fragment() {
         _binding = HomeFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -29,39 +30,39 @@ class HomeFragment : Fragment() {
         binding.lifeTextView.text = SpannableStringBuilder()
             .append(
                 resources.getString(R.string.home_screen_life),
-                AbsoluteSizeSpan(R.dimen.home_screen_title_size),
+                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_title_size)),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
             .append("\n")
             .append(
                 yugraString,
-                AbsoluteSizeSpan(R.dimen.home_screen_yugre_size),
+                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_yugre_size)),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
 
         binding.restTextView.text = SpannableStringBuilder()
             .append(
                 resources.getString(R.string.home_screen_rest),
-                AbsoluteSizeSpan(R.dimen.home_screen_title_size),
+                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_title_size)),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
             .append("\n")
             .append(
                 yugraString,
-                AbsoluteSizeSpan(R.dimen.home_screen_yugre_size),
+                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_yugre_size)),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
 
         binding.workTextView.text = SpannableStringBuilder()
             .append(
                 resources.getString(R.string.home_screen_work),
-                AbsoluteSizeSpan(R.dimen.home_screen_title_size),
+                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_title_size)),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
             .append("\n")
             .append(
                 yugraString,
-                AbsoluteSizeSpan(R.dimen.home_screen_yugre_size),
+                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_yugre_size)),
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
 
