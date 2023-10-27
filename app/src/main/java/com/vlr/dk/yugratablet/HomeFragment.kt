@@ -7,8 +7,8 @@ import android.text.style.AbsoluteSizeSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 
 class HomeFragment : Fragment() {
@@ -75,13 +75,13 @@ class HomeFragment : Fragment() {
 
     private fun bindingClicks() {
         binding.lifeBlock.setOnClickListener {
-            Toast.makeText(context, "LIFE", Toast.LENGTH_LONG).show()
+            it.findNavController().navigate(R.id.action_open_lifeFragment)
         }
         binding.restBlock.setOnClickListener {
-            Toast.makeText(context, "REST", Toast.LENGTH_LONG).show()
+            it.findNavController().navigate(R.id.action_open_restFragment)
         }
         binding.workBlock.setOnClickListener {
-            Toast.makeText(context, "WORK", Toast.LENGTH_LONG).show()
+            it.findNavController().navigate(R.id.action_open_workFragment)
         }
     }
 
