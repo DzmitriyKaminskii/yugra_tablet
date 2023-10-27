@@ -8,6 +8,4 @@
     <string name="home_screen_rest">ОТДЫХАТЬ В</string>
     <string name="home_screen_work">РАБОТАТЬ В</string>
 
-    <dimen name="home_screen_yugre_size">40sp</dimen>
-    <dimen name="home_screen_title_size">20sp</dimen>
 </resources>
