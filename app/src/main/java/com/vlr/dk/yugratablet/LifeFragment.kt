@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.databinding.LifeFragmentBinding
 
 class LifeFragment : Fragment() {
@@ -19,8 +20,21 @@ class LifeFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        bindingAction()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun bindingAction() {
+        binding.backAction.setOnClickListener {
+            it.findNavController().popBackStack()
+        }
+    }
+
 }

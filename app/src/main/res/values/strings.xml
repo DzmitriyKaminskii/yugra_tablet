@@ -7,7 +7,7 @@
     <string name="home_screen_life">ЖИТЬ В</string>
     <string name="home_screen_rest">ОТДЫХАТЬ В</string>
     <string name="home_screen_work">РАБОТАТЬ В</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="back_button_text">Назад</string>
 
 </resources>

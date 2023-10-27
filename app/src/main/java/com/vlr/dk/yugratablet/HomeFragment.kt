@@ -30,6 +30,11 @@ class HomeFragment : Fragment() {
         bindingClicks()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
     private fun updateTitles() {
         val yugraString = resources.getString(R.string.home_screen_yugre)
 
@@ -83,11 +88,6 @@ class HomeFragment : Fragment() {
         binding.workBlock.setOnClickListener {
             it.findNavController().navigate(R.id.action_open_workFragment)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
 }
