@@ -1,4 +1,4 @@
-package com.vlr.dk.yugratablet.screens
+package com.vlr.dk.yugratablet.base_screens
 
 import android.os.Bundle
 import android.view.LayoutInflater

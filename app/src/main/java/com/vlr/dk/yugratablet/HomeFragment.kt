@@ -1,4 +1,4 @@
-package com.vlr.dk.yugratablet.screens
+package com.vlr.dk.yugratablet
 
 import android.os.Bundle
 import android.text.Spannable

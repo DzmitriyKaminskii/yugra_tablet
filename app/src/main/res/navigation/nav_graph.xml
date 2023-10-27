@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navFragment"
-        android:name="com.vlr.dk.yugratablet.screens.HomeFragment"
+        android:name="com.vlr.dk.yugratablet.HomeFragment"
         android:label="fragment_nav"
         tools:layout="@layout/home_fragment" >
         <action
@@ -22,14 +22,14 @@
     </fragment>
     <fragment
         android:id="@+id/lifeFragment"
-        android:name="com.vlr.dk.yugratablet.screens.LifeFragment"
+        android:name="com.vlr.dk.yugratablet.base_screens.LifeFragment"
         android:label="LifeFragment" />
     <fragment
         android:id="@+id/restFragment"
-        android:name="com.vlr.dk.yugratablet.screens.RestFragment"
+        android:name="com.vlr.dk.yugratablet.base_screens.RestFragment"
         android:label="RestFragment" />
     <fragment
         android:id="@+id/workFragment"
-        android:name="com.vlr.dk.yugratablet.screens.WorkFragment"
+        android:name="com.vlr.dk.yugratablet.base_screens.WorkFragment"
         android:label="WorkFragment" />
 </navigation>
