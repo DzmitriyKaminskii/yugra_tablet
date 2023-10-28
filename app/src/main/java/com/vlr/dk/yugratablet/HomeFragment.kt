@@ -16,6 +16,7 @@ import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 import com.vlr.dk.yugratablet.gesture.CustomGestureListener
 import com.vlr.dk.yugratablet.utils.DeviceDimensionsHelper
 
+private const val DELAY = 2000L
 
 class HomeFragment : Fragment() {
     private var _binding: HomeFragmentBinding? = null
@@ -50,20 +51,20 @@ class HomeFragment : Fragment() {
     }
 
     private fun bindingClicks() {
-        binding.lifeBlock.setOnClickListener { actionView ->
-            context?.let {
-                binding.mainBlock.setBackgroundResource(R.drawable.life_bg)
-                animation()
-                Handler().postDelayed({
-                    actionView.findNavController().navigate(R.id.lifeFragment)
-                }, 2000)
-            }
+        binding.lifeBlock.setOnClickListener {
+            clickAction(
+                actionView = it,
+                backgroundId = R.drawable.life_bg,
+                destinationId = R.id.lifeFragment
+            )
         }
 
         binding.restBlock.setOnClickListener {
-            binding.mainBlock.setBackgroundResource(R.drawable.rest_bg)
-            animation()
-            //it.findNavController().navigate(R.id.action_open_restFragment)
+            clickAction(
+                actionView = it,
+                backgroundId = R.drawable.rest_bg,
+                destinationId = R.id.restFragment
+            )
         }
 
         binding.workBlock.setOnClickListener {
@@ -106,7 +107,14 @@ class HomeFragment : Fragment() {
                 view.setImageBitmap(resourcesScaledBitmap)
             }
         }
+    }
 
+    private fun clickAction(actionView: View, backgroundId: Int, destinationId: Int) {
+        binding.mainBlock.setBackgroundResource(backgroundId)
+        animation()
+        Handler().postDelayed({
+            actionView.findNavController().navigate(destinationId)
+        }, DELAY)
     }
 
 }

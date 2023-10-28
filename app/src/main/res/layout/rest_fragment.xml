@@ -5,46 +5,27 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/mainBlock"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/rest_bg"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
-                android:id="@+id/tourismBlock"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#aa0000"
-                android:orientation="vertical">
+        <ImageView
+            android:id="@+id/tourismBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tourism_block" />
 
-                <TextView
-                    android:id="@+id/tourismTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:gravity="bottom|center_horizontal" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/cultureBlock"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#0000aa"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/cultureTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:gravity="bottom|center_horizontal"
-                    android:layout_weight="1" />
-            </LinearLayout>
+        <ImageView
+            android:id="@+id/cultureBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/culture_block" />
 
     </LinearLayout>
 
@@ -53,8 +34,8 @@
         android:id="@+id/backAction"
         android:layout_width="@dimen/back_button_width"
         android:layout_height="@dimen/back_button_height"
-        android:layout_marginTop="@dimen/back_button_top_margin"
         android:layout_marginStart="@dimen/back_button_start_margin"
+        android:layout_marginTop="@dimen/back_button_top_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
