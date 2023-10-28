@@ -32,9 +32,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
-                    android:gravity="bottom|center_horizontal"
-                    android:text="@string/life_screen_cat_construction" />
+                    android:gravity="bottom|center_horizontal" />
 
             </LinearLayout>
 
@@ -50,10 +48,8 @@
                     android:id="@+id/medicineTextView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
                     android:gravity="bottom|center_horizontal"
-                    android:layout_weight="1"
-                    android:text="@string/life_screen_cat_medicine" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
@@ -68,10 +64,8 @@
                     android:id="@+id/sportsTextView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
                     android:gravity="bottom|center_horizontal"
-                    android:layout_weight="1"
-                    android:text="@string/life_screen_cat_sports" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
         </LinearLayout>
@@ -94,10 +88,8 @@
                     android:id="@+id/transportTextView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/sub_cat_margin_top_bottom"
                     android:gravity="top|center_horizontal"
-                    android:layout_weight="1"
-                    android:text="@string/life_screen_cat_transport" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -113,10 +105,8 @@
                     android:id="@+id/trainingTextView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/sub_cat_margin_top_bottom"
                     android:gravity="top|center_horizontal"
-                    android:layout_weight="1"
-                    android:text="@string/life_screen_cat_training" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <LinearLayout
@@ -131,10 +121,8 @@
                     android:id="@+id/childrenTextView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginTop="@dimen/sub_cat_margin_top_bottom"
                     android:gravity="top|center_horizontal"
-                    android:layout_weight="1"
-                    android:text="@string/life_screen_cat_children" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -149,8 +137,6 @@
         android:layout_height="@dimen/back_button_height"
         android:layout_marginStart="@dimen/back_button_start_margin"
         android:layout_marginTop="@dimen/back_button_top_margin"
-        android:text="@string/back_button_text"
-        android:textSize="@dimen/back_button_text_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

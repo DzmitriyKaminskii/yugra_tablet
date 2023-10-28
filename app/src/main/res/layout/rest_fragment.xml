@@ -26,9 +26,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
-                    android:gravity="bottom|center_horizontal"
-                    android:text="@string/life_screen_cat_construction" />
+                    android:gravity="bottom|center_horizontal" />
 
             </LinearLayout>
 
@@ -44,10 +42,8 @@
                     android:id="@+id/cultureTextView"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/sub_cat_margin_top_bottom"
                     android:gravity="bottom|center_horizontal"
-                    android:layout_weight="1"
-                    android:text="@string/life_screen_cat_medicine" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
     </LinearLayout>
@@ -57,8 +53,6 @@
         android:id="@+id/backAction"
         android:layout_width="@dimen/back_button_width"
         android:layout_height="@dimen/back_button_height"
-        android:text="@string/back_button_text"
-        android:textSize="@dimen/back_button_text_size"
         android:layout_marginTop="@dimen/back_button_top_margin"
         android:layout_marginStart="@dimen/back_button_start_margin"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,18 +1,15 @@
 package com.vlr.dk.yugratablet
 
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableStringBuilder
-import android.text.style.AbsoluteSizeSpan
 import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.vlr.dk.yugratablet.R
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 import com.vlr.dk.yugratablet.gesture.CustomGestureListener
+
 
 class HomeFragment : Fragment() {
     private var _binding: HomeFragmentBinding? = null
@@ -37,56 +34,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        updateTitles()
         bindingClicks()
+        //animation()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    private fun updateTitles() {
-        val yugraString = resources.getString(R.string.home_screen_yugre)
-
-        binding.lifeTextView.text = SpannableStringBuilder()
-            .append(
-                resources.getString(R.string.home_screen_life),
-                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_title_size)),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-            .append("\n")
-            .append(
-                yugraString,
-                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_yugre_size)),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-
-        binding.restTextView.text = SpannableStringBuilder()
-            .append(
-                resources.getString(R.string.home_screen_rest),
-                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_title_size)),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-            .append("\n")
-            .append(
-                yugraString,
-                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_yugre_size)),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-
-        binding.workTextView.text = SpannableStringBuilder()
-            .append(
-                resources.getString(R.string.home_screen_work),
-                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_title_size)),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
-            .append("\n")
-            .append(
-                yugraString,
-                AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.home_screen_yugre_size)),
-                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-            )
     }
 
     private fun bindingClicks() {
@@ -104,5 +58,29 @@ class HomeFragment : Fragment() {
             gestureDetector.onTouchEvent(event)
         }
     }
+
+//    private fun animation() {
+//        scaleView(binding.lifeBlock, 0f, 1f)
+//
+//        Handler().postDelayed({
+//            scaleView(binding.restBlock, 0f, 1f)
+//        }, 300)
+//
+//        Handler().postDelayed({
+//            scaleView(binding.workBlock, 0f, 1f)
+//        }, 500)
+//    }
+//
+//    private fun scaleView(v: View, startScale: Float, endScale: Float) {
+//        val anim: Animation = ScaleAnimation(
+//            1f, 1f,  // Start and end values for the X axis scaling
+//            startScale, endScale,  // Start and end values for the Y axis scaling
+//            Animation.RELATIVE_TO_SELF, 0f,  // Pivot point of X scaling
+//            Animation.RELATIVE_TO_SELF, 1f
+//        ) // Pivot point of Y scaling
+//        anim.fillAfter = true // Needed to keep the result of the animation
+//        anim.duration = 1200
+//        v.startAnimation(anim)
+//    }
 
 }

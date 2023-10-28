@@ -13,62 +13,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <ImageView
             android:id="@+id/lifeBlock"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#aa0000"
-            android:orientation="vertical">
+            android:layout_width="426dp"
+            android:layout_height="800dp"
+            android:src="@drawable/life_block" />
 
-            <TextView
-                android:id="@+id/lifeTextView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/home_screen_title_margin_top"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/home_screen_life" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <ImageView
             android:id="@+id/restBlock"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#0000aa"
-            android:orientation="vertical">
+            android:layout_width="428dp"
+            android:layout_height="800dp"
+            android:src="@drawable/rest_block" />
 
-            <TextView
-                android:id="@+id/restTextView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/home_screen_title_margin_top"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/home_screen_rest" />
-        </LinearLayout>
-
-        <LinearLayout
+        <ImageView
             android:id="@+id/workBlock"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#aaaa00"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/workTextView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/home_screen_title_margin_top"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/home_screen_work" />
-        </LinearLayout>
-
-
+            android:layout_width="426dp"
+            android:layout_height="800dp"
+            android:src="@drawable/work_block" />
     </LinearLayout>
 
     <TextView
