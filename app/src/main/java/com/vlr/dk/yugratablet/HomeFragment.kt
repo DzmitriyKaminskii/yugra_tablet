@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 import com.vlr.dk.yugratablet.gesture.CustomGestureListener
-import com.vlr.dk.yugratablet.utils.BACKGROUND_KEY
 import com.vlr.dk.yugratablet.utils.DeviceDimensionsHelper
 
 
