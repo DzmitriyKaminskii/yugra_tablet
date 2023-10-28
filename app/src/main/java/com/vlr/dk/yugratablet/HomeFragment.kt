@@ -40,11 +40,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        updateUI()
         bindingClicks()
-
-        scaleHeightIfNeeded(R.drawable.life_block, binding.lifeBlock)
-        scaleHeightIfNeeded(R.drawable.rest_block, binding.restBlock)
-        scaleHeightIfNeeded(R.drawable.work_block, binding.workBlock)
     }
 
     override fun onDestroyView() {
@@ -87,6 +84,12 @@ class HomeFragment : Fragment() {
         binding.lifeBlock.startAnimation(firstBlockAnim)
         binding.restBlock.startAnimation(secondBlockAnim)
         binding.workBlock.startAnimation(thirdBlockAnim)
+    }
+
+    private fun updateUI() {
+        scaleHeightIfNeeded(R.drawable.life_block, binding.lifeBlock)
+        scaleHeightIfNeeded(R.drawable.rest_block, binding.restBlock)
+        scaleHeightIfNeeded(R.drawable.work_block, binding.workBlock)
     }
 
     private fun scaleHeightIfNeeded(resId: Int, view: ImageView) {
