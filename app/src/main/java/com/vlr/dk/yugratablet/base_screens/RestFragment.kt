@@ -3,9 +3,11 @@ package com.vlr.dk.yugratablet.base_screens
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -33,7 +35,7 @@ class RestFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        updateUI()
+        updateUIWithAnimation()
         bindingAction()
     }
 
@@ -43,9 +45,24 @@ class RestFragment : Fragment() {
         }
     }
 
-    private fun updateUI() {
+    private fun updateUIWithAnimation() {
         scaleHeightIfNeeded(R.drawable.tourism_block, binding.tourismBlock)
         scaleHeightIfNeeded(R.drawable.culture_block, binding.cultureBlock)
+
+        val tourismBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_ltr_turism)
+        binding.tourismBlock.startAnimation(tourismBlockAnim)
+
+        val cultureBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_rtl_culture)
+        binding.cultureBlock.startAnimation(cultureBlockAnim)
+
+        binding.backAction.visibility = View.GONE
+        val backButtonAnim = AnimationUtils.loadAnimation(context, R.anim.move_ltr)
+
+        Handler().postDelayed({
+            binding.backAction.visibility = View.VISIBLE
+            binding.backAction.startAnimation(backButtonAnim)
+        }, 1000)
+
     }
 
     private fun scaleHeightIfNeeded(resId: Int, view: ImageView) {
