@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/mainBlock"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
@@ -15,20 +16,20 @@
 
         <ImageView
             android:id="@+id/lifeBlock"
-            android:layout_width="426dp"
-            android:layout_height="800dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/life_block" />
 
         <ImageView
             android:id="@+id/restBlock"
-            android:layout_width="428dp"
-            android:layout_height="800dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/rest_block" />
 
         <ImageView
             android:id="@+id/workBlock"
-            android:layout_width="426dp"
-            android:layout_height="800dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/work_block" />
     </LinearLayout>
 
