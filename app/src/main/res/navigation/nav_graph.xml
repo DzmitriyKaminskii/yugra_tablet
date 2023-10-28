@@ -9,17 +9,7 @@
         android:id="@+id/navFragment"
         android:name="com.vlr.dk.yugratablet.HomeFragment"
         android:label="fragment_nav"
-        tools:layout="@layout/home_fragment" >
-        <action
-            android:id="@+id/action_open_lifeFragment"
-            app:destination="@id/lifeFragment" />
-        <action
-            android:id="@+id/action_open_restFragment"
-            app:destination="@id/restFragment" />
-        <action
-            android:id="@+id/action_open_workFragment"
-            app:destination="@id/workFragment" />
-    </fragment>
+        tools:layout="@layout/home_fragment" />
     <fragment
         android:id="@+id/lifeFragment"
         android:name="com.vlr.dk.yugratablet.base_screens.LifeFragment"

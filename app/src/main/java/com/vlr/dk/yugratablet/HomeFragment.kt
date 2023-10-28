@@ -3,6 +3,7 @@ package com.vlr.dk.yugratablet
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.os.Handler
 import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +11,10 @@ import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 import com.vlr.dk.yugratablet.gesture.CustomGestureListener
+import com.vlr.dk.yugratablet.utils.BACKGROUND_KEY
 import com.vlr.dk.yugratablet.utils.DeviceDimensionsHelper
 
 
@@ -51,15 +54,22 @@ class HomeFragment : Fragment() {
     }
 
     private fun bindingClicks() {
-        binding.lifeBlock.setOnClickListener {
-            binding.mainBlock.setBackgroundResource(R.drawable.life_bg)
-            animation()
+        binding.lifeBlock.setOnClickListener { actionView ->
+            context?.let {
+                binding.mainBlock.setBackgroundResource(R.drawable.life_bg)
+                animation()
+                Handler().postDelayed({
+                    actionView.findNavController().navigate(R.id.lifeFragment)
+                }, 2000)
+            }
         }
+
         binding.restBlock.setOnClickListener {
             binding.mainBlock.setBackgroundResource(R.drawable.rest_bg)
             animation()
             //it.findNavController().navigate(R.id.action_open_restFragment)
         }
+
         binding.workBlock.setOnClickListener {
             binding.mainBlock.setBackgroundResource(R.drawable.work_bg)
             animation()
