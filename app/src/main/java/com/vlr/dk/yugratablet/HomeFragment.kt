@@ -1,14 +1,18 @@
 package com.vlr.dk.yugratablet
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 import com.vlr.dk.yugratablet.gesture.CustomGestureListener
+import com.vlr.dk.yugratablet.utils.DeviceDimensionsHelper
 
 
 class HomeFragment : Fragment() {
@@ -35,7 +39,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         bindingClicks()
-        //animation()
+
+        scaleHeightIfNeeded(R.drawable.life_block, binding.lifeBlock)
+        scaleHeightIfNeeded(R.drawable.rest_block, binding.restBlock)
+        scaleHeightIfNeeded(R.drawable.work_block, binding.workBlock)
     }
 
     override fun onDestroyView() {
@@ -45,13 +52,18 @@ class HomeFragment : Fragment() {
 
     private fun bindingClicks() {
         binding.lifeBlock.setOnClickListener {
-            it.findNavController().navigate(R.id.action_open_lifeFragment)
+            binding.mainBlock.setBackgroundResource(R.drawable.life_bg)
+            animation()
         }
         binding.restBlock.setOnClickListener {
-            it.findNavController().navigate(R.id.action_open_restFragment)
+            binding.mainBlock.setBackgroundResource(R.drawable.rest_bg)
+            animation()
+            //it.findNavController().navigate(R.id.action_open_restFragment)
         }
         binding.workBlock.setOnClickListener {
-            it.findNavController().navigate(R.id.action_open_workFragment)
+            binding.mainBlock.setBackgroundResource(R.drawable.work_bg)
+            animation()
+            //it.findNavController().navigate(R.id.action_open_workFragment)
         }
 
         binding.securityButton.setOnTouchListener { _, event ->
@@ -59,28 +71,30 @@ class HomeFragment : Fragment() {
         }
     }
 
-//    private fun animation() {
-//        scaleView(binding.lifeBlock, 0f, 1f)
-//
-//        Handler().postDelayed({
-//            scaleView(binding.restBlock, 0f, 1f)
-//        }, 300)
-//
-//        Handler().postDelayed({
-//            scaleView(binding.workBlock, 0f, 1f)
-//        }, 500)
-//    }
-//
-//    private fun scaleView(v: View, startScale: Float, endScale: Float) {
-//        val anim: Animation = ScaleAnimation(
-//            1f, 1f,  // Start and end values for the X axis scaling
-//            startScale, endScale,  // Start and end values for the Y axis scaling
-//            Animation.RELATIVE_TO_SELF, 0f,  // Pivot point of X scaling
-//            Animation.RELATIVE_TO_SELF, 1f
-//        ) // Pivot point of Y scaling
-//        anim.fillAfter = true // Needed to keep the result of the animation
-//        anim.duration = 1200
-//        v.startAnimation(anim)
-//    }
+    private fun animation() {
+        val firstBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_up_first)
+        val secondBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_up_second)
+        val thirdBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_up_third)
+        binding.lifeBlock.startAnimation(firstBlockAnim)
+        binding.restBlock.startAnimation(secondBlockAnim)
+        binding.workBlock.startAnimation(thirdBlockAnim)
+    }
+
+    private fun scaleHeightIfNeeded(resId: Int, view: ImageView) {
+        val resourcesBitmap = BitmapFactory.decodeResource(resources, resId)
+        context?.let {
+            val displayHeight = DeviceDimensionsHelper.getDisplayHeight(it)
+            if (displayHeight < resourcesBitmap.height) {
+                val resourcesScaledBitmap = Bitmap.createScaledBitmap(
+                    resourcesBitmap,
+                    resourcesBitmap.width,
+                    displayHeight,
+                    true
+                )
+                view.setImageBitmap(resourcesScaledBitmap)
+            }
+        }
+
+    }
 
 }
