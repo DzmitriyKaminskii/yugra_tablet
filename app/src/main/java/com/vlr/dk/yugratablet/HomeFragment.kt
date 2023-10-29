@@ -54,7 +54,6 @@ class HomeFragment : Fragment() {
         binding.lifeBlock.setOnClickListener {
             clickAction(
                 actionView = it,
-                backgroundId = R.drawable.life_bg,
                 destinationId = R.id.lifeFragment
             )
         }
@@ -62,7 +61,6 @@ class HomeFragment : Fragment() {
         binding.restBlock.setOnClickListener {
             clickAction(
                 actionView = it,
-                backgroundId = R.drawable.rest_bg,
                 destinationId = R.id.restFragment
             )
         }
@@ -70,7 +68,6 @@ class HomeFragment : Fragment() {
         binding.workBlock.setOnClickListener {
             clickAction(
                 actionView = it,
-                backgroundId = R.drawable.work_bg,
                 destinationId = R.id.workFragment
             )
         }
@@ -111,8 +108,7 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun clickAction(actionView: View, backgroundId: Int, destinationId: Int) {
-        binding.mainBlock.setBackgroundResource(backgroundId)
+    private fun clickAction(actionView: View, destinationId: Int) {
         animation()
         Handler().postDelayed({
             actionView.findNavController().navigate(destinationId)
