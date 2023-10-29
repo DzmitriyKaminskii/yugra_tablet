@@ -20,7 +20,12 @@ private val titleList = listOf(
 )
 
 private val contentResId = listOf(
-    R.drawable.work_doc
+    R.drawable.cr1,
+    R.drawable.cr2,
+    R.drawable.cr3,
+    R.drawable.cr1,
+    R.drawable.cr2,
+    R.drawable.cr3
 )
 
 private var resId: Int? = null
@@ -57,7 +62,7 @@ class LifeDetailFragment : Fragment() {
     private fun updateUI() {
         resId?.let {
             binding.navTitle.text = titleList[it]
-            binding.mainImageBlock.setImageResource(contentResId[0])
+            binding.mainImageBlock.setImageResource(contentResId[it])
         }
     }
 
