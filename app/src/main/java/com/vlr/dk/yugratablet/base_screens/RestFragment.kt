@@ -13,6 +13,7 @@ import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.R
 import com.vlr.dk.yugratablet.databinding.RestFragmentBinding
 import com.vlr.dk.yugratablet.utils.DeviceDimensionsHelper
+import com.vlr.dk.yugratablet.utils.RES_ID
 
 class RestFragment : Fragment() {
     private var _binding: RestFragmentBinding? = null
@@ -41,6 +42,18 @@ class RestFragment : Fragment() {
     private fun bindingAction() {
         binding.backAction.setOnClickListener {
             it.findNavController().popBackStack()
+        }
+
+        binding.tourismBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 0)
+            it.findNavController().navigate(R.id.restDetailFragment, data)
+        }
+
+        binding.cultureBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 1)
+            it.findNavController().navigate(R.id.restDetailFragment, data)
         }
     }
 

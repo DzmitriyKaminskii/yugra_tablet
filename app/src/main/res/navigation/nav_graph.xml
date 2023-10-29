@@ -27,4 +27,8 @@
         android:name="com.vlr.dk.yugratablet.detail_screens.LifeDetailFragment"
         android:label="life_detail_fragment"
         tools:layout="@layout/life_detail_fragment" />
+    <fragment
+        android:id="@+id/restDetailFragment"
+        android:name="com.vlr.dk.yugratablet.detail_screens.RestDetailFragment"
+        android:label="RestDetailFragment" />
 </navigation>
