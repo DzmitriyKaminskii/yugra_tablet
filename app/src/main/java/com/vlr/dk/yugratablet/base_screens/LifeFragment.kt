@@ -59,6 +59,12 @@ class LifeFragment : Fragment() {
         val transportBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_transport)
         binding.transportBlock.startAnimation(transportBlockAnim)
 
+        val medicineBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_medicine)
+        binding.medicineBlock.startAnimation(medicineBlockAnim)
+
+        val trainingBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_training)
+        binding.trainingBlock.startAnimation(trainingBlockAnim)
+
         binding.backAction.visibility = View.GONE
         val backButtonAnim = AnimationUtils.loadAnimation(context, R.anim.move_ltr)
 
