@@ -63,19 +63,23 @@ class LifeDetailFragment : Fragment() {
 
     private fun moveBack() {
         resId?.let {
-            if (it > minId) {
-                resId = it - 1
-                updateUI()
+            resId = if (it > minId) {
+                it - 1
+            } else {
+                maxId
             }
+            updateUI()
         }
     }
 
     private fun moveForward() {
         resId?.let {
-            if (it < maxId) {
-                resId = it + 1
-                updateUI()
+            resId = if (it < maxId) {
+                it + 1
+            } else {
+                minId
             }
+            updateUI()
         }
     }
 
