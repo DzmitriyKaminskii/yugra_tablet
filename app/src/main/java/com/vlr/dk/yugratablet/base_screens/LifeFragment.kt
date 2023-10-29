@@ -41,7 +41,7 @@ class LifeFragment : Fragment() {
 
     private fun bindingAction() {
         binding.backAction.setOnClickListener {
-            it.findNavController().popBackStack()
+            it.findNavController().popBackStack(R.id.navFragment, false)
         }
 
         binding.constructionBlock.setOnClickListener {
