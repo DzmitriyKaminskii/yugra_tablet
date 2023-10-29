@@ -53,6 +53,12 @@ class LifeFragment : Fragment() {
         scaleHeightIfNeeded(R.drawable.training_block, binding.trainingBlock)
         scaleHeightIfNeeded(R.drawable.children_block, binding.childrenBlock)
 
+        val constractionBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_constraction)
+        binding.constructionBlock.startAnimation(constractionBlockAnim)
+
+        val transportBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_transport)
+        binding.transportBlock.startAnimation(transportBlockAnim)
+
         binding.backAction.visibility = View.GONE
         val backButtonAnim = AnimationUtils.loadAnimation(context, R.anim.move_ltr)
 
