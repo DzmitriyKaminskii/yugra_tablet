@@ -68,9 +68,11 @@ class HomeFragment : Fragment() {
         }
 
         binding.workBlock.setOnClickListener {
-            binding.mainBlock.setBackgroundResource(R.drawable.work_bg)
-            animation()
-            //it.findNavController().navigate(R.id.action_open_workFragment)
+            clickAction(
+                actionView = it,
+                backgroundId = R.drawable.work_bg,
+                destinationId = R.id.workFragment
+            )
         }
 
         binding.securityButton.setOnTouchListener { _, event ->

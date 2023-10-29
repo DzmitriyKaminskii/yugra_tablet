@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="security_button_size">20dp</dimen>
+
+    <dimen name="header_invisible_back_button_width">359dp</dimen>
+    <dimen name="header_invisible_back_button_height">102dp</dimen>
 </resources>
