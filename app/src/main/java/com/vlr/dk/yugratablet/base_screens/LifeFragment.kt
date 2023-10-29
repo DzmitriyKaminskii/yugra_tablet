@@ -13,6 +13,7 @@ import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.R
 import com.vlr.dk.yugratablet.databinding.LifeFragmentBinding
 import com.vlr.dk.yugratablet.utils.DeviceDimensionsHelper
+import com.vlr.dk.yugratablet.utils.RES_ID
 
 class LifeFragment : Fragment() {
     private var _binding: LifeFragmentBinding? = null
@@ -41,6 +42,42 @@ class LifeFragment : Fragment() {
     private fun bindingAction() {
         binding.backAction.setOnClickListener {
             it.findNavController().popBackStack()
+        }
+
+        binding.constructionBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 0)
+            it.findNavController().navigate(R.id.lifeDetailFragment, data)
+        }
+
+        binding.medicineBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 1)
+            it.findNavController().navigate(R.id.lifeDetailFragment, data)
+        }
+
+        binding.sportsBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 2)
+            it.findNavController().navigate(R.id.lifeDetailFragment, data)
+        }
+
+        binding.transportBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 3)
+            it.findNavController().navigate(R.id.lifeDetailFragment, data)
+        }
+
+        binding.trainingBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 4)
+            it.findNavController().navigate(R.id.lifeDetailFragment, data)
+        }
+
+        binding.childrenBlock.setOnClickListener {
+            val data = Bundle()
+            data.putInt(RES_ID, 5)
+            it.findNavController().navigate(R.id.lifeDetailFragment, data)
         }
     }
 

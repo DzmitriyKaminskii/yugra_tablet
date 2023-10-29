@@ -22,4 +22,9 @@
         android:id="@+id/workFragment"
         android:name="com.vlr.dk.yugratablet.base_screens.WorkFragment"
         android:label="WorkFragment" />
+    <fragment
+        android:id="@+id/lifeDetailFragment"
+        android:name="com.vlr.dk.yugratablet.detail_screens.LifeDetailFragment"
+        android:label="life_detail_fragment"
+        tools:layout="@layout/life_detail_fragment" />
 </navigation>
