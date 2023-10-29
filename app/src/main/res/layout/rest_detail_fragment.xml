@@ -50,6 +50,8 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/header_details_text_size"
         android:textAlignment="center"
+        android:fontFamily="@font/norwesterg"
+        android:textAllCaps="true"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/header_details_nav_button_top"
