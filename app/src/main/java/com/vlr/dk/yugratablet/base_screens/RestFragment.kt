@@ -3,7 +3,6 @@ package com.vlr.dk.yugratablet.base_screens
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,14 +54,8 @@ class RestFragment : Fragment() {
         val cultureBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_rtl_culture)
         binding.cultureBlock.startAnimation(cultureBlockAnim)
 
-        binding.backAction.visibility = View.GONE
         val backButtonAnim = AnimationUtils.loadAnimation(context, R.anim.move_ltr)
-
-        Handler().postDelayed({
-            binding.backAction.visibility = View.VISIBLE
-            binding.backAction.startAnimation(backButtonAnim)
-        }, 1000)
-
+        binding.backAction.startAnimation(backButtonAnim)
     }
 
     private fun scaleHeightIfNeeded(resId: Int, view: ImageView) {

@@ -4,13 +4,14 @@
     android:interpolator="@android:anim/decelerate_interpolator">
 
     <translate
-        android:duration="1000"
+        android:duration="250"
         android:fromXDelta="-5%p"
         android:toXDelta="0%p" />
 
     <alpha
         android:fromAlpha="0"
         android:toAlpha="1"
-        android:duration="1000" >
+        android:duration="250" >
     </alpha>
+
 </set>
