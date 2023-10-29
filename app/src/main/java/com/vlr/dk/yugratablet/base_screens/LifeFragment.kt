@@ -65,6 +65,12 @@ class LifeFragment : Fragment() {
         val trainingBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_training)
         binding.trainingBlock.startAnimation(trainingBlockAnim)
 
+        val sportBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_sport)
+        binding.sportsBlock.startAnimation(sportBlockAnim)
+
+        val childrenBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_children)
+        binding.childrenBlock.startAnimation(childrenBlockAnim)
+
         binding.backAction.visibility = View.GONE
         val backButtonAnim = AnimationUtils.loadAnimation(context, R.anim.move_ltr)
 
