@@ -5,6 +5,11 @@
     <dimen name="header_invisible_back_button_width">359dp</dimen>
     <dimen name="header_invisible_back_button_height">102dp</dimen>
 
-    <dimen name="header_details_text_width">450dp</dimen>
+    <dimen name="header_details_text_width">435dp</dimen>
     <dimen name="header_details_text_size">40sp</dimen>
+    <dimen name="header_details_text_top">30sp</dimen>
+    <dimen name="header_details_text_end">112sp</dimen>
+
+    <dimen name="header_details_nav_button_size">50dp</dimen>
+    <dimen name="header_details_nav_button_top">33dp</dimen>
 </resources>

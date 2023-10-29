@@ -37,6 +37,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/navActionBack"
+        android:layout_width="@dimen/header_details_nav_button_size"
+        android:layout_height="@dimen/header_details_nav_button_size"
+        android:layout_marginTop="@dimen/header_details_nav_button_top"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/navTitle"/>
+
     <TextView
         android:id="@+id/navTitle"
         android:layout_width="@dimen/header_details_text_width"
@@ -45,9 +53,17 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginTop="@dimen/header_details_nav_button_top"
+        android:layout_marginEnd="@dimen/header_details_text_end"
         app:layout_constraintTop_toTopOf="parent"
         android:text="@string/empty_string" />
+
+    <ImageView
+        android:id="@+id/navActionForward"
+        android:layout_width="@dimen/header_details_nav_button_size"
+        android:layout_height="@dimen/header_details_nav_button_size"
+        android:layout_marginTop="@dimen/header_details_nav_button_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/navTitle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,6 +24,8 @@ private val contentResId = listOf(
 )
 
 private var resId: Int? = null
+private var minId = 0
+private val maxId = 5
 
 class LifeDetailFragment : Fragment() {
 
@@ -48,14 +50,32 @@ class LifeDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        updateUIWithAnimation()
+        this.updateUI()
         bindingAction()
     }
 
-    private fun updateUIWithAnimation() {
+    private fun updateUI() {
         resId?.let {
             binding.navTitle.text = titleList[it]
             binding.mainImageBlock.setImageResource(contentResId[0])
+        }
+    }
+
+    private fun moveBack() {
+        resId?.let {
+            if (it > minId) {
+                resId = it - 1
+                updateUI()
+            }
+        }
+    }
+
+    private fun moveForward() {
+        resId?.let {
+            if (it < maxId) {
+                resId = it + 1
+                updateUI()
+            }
         }
     }
 
@@ -63,5 +83,8 @@ class LifeDetailFragment : Fragment() {
         binding.backAction.setOnClickListener {
             it.findNavController().popBackStack()
         }
+
+        binding.navActionBack.setOnClickListener { moveBack() }
+        binding.navActionForward.setOnClickListener { moveForward() }
     }
 }
