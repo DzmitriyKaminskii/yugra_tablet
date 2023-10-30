@@ -16,7 +16,7 @@
             android:id="@+id/mainImageBlock"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:src="@drawable/cr1" />
+            android:src="@drawable/rab" />
 
     </HorizontalScrollView>
 
