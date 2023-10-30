@@ -11,26 +11,22 @@ import com.vlr.dk.yugratablet.databinding.LifeDetailFragmentBinding
 import com.vlr.dk.yugratablet.utils.RES_ID
 
 private val titleList = listOf(
-    "Строительство",
     "Медицина",
     "Спорт",
     "Транспорт",
-    "Обучение",
-    "Дети"
+    "Обучение"
 )
 
 private val contentResId = listOf(
-    R.drawable.sport,
     R.drawable.med,
     R.drawable.sport,
     R.drawable.trans,
-    R.drawable.med,
-    R.drawable.trans
+    R.drawable.med
 )
 
 private var resId: Int? = null
 private var minId = 0
-private val maxId = 5
+private val maxId = 3
 
 class LifeDetailFragment : Fragment() {
 

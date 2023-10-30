@@ -44,53 +44,37 @@ class LifeFragment : Fragment() {
             it.findNavController().popBackStack(R.id.navFragment, false)
         }
 
-        binding.constructionBlock.setOnClickListener {
+        binding.medicineBlock.setOnClickListener {
             val data = Bundle()
             data.putInt(RES_ID, 0)
             it.findNavController().navigate(R.id.lifeDetailFragment, data)
         }
 
-        binding.medicineBlock.setOnClickListener {
+        binding.sportsBlock.setOnClickListener {
             val data = Bundle()
             data.putInt(RES_ID, 1)
             it.findNavController().navigate(R.id.lifeDetailFragment, data)
         }
 
-        binding.sportsBlock.setOnClickListener {
+        binding.transportBlock.setOnClickListener {
             val data = Bundle()
             data.putInt(RES_ID, 2)
             it.findNavController().navigate(R.id.lifeDetailFragment, data)
         }
 
-        binding.transportBlock.setOnClickListener {
+        binding.trainingBlock.setOnClickListener {
             val data = Bundle()
             data.putInt(RES_ID, 3)
             it.findNavController().navigate(R.id.lifeDetailFragment, data)
         }
 
-        binding.trainingBlock.setOnClickListener {
-            val data = Bundle()
-            data.putInt(RES_ID, 4)
-            it.findNavController().navigate(R.id.lifeDetailFragment, data)
-        }
-
-        binding.childrenBlock.setOnClickListener {
-            val data = Bundle()
-            data.putInt(RES_ID, 5)
-            it.findNavController().navigate(R.id.lifeDetailFragment, data)
-        }
     }
 
     private fun updateUIWithAnimation() {
-        scaleHeightIfNeeded(R.drawable.construction_block, binding.constructionBlock)
         scaleHeightIfNeeded(R.drawable.medicine_block, binding.medicineBlock)
         scaleHeightIfNeeded(R.drawable.sports_block, binding.sportsBlock)
         scaleHeightIfNeeded(R.drawable.transport_block, binding.transportBlock)
         scaleHeightIfNeeded(R.drawable.training_block, binding.trainingBlock)
-        scaleHeightIfNeeded(R.drawable.children_block, binding.childrenBlock)
-
-        val constractionBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_constraction)
-        binding.constructionBlock.startAnimation(constractionBlockAnim)
 
         val transportBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_transport)
         binding.transportBlock.startAnimation(transportBlockAnim)
@@ -103,9 +87,6 @@ class LifeFragment : Fragment() {
 
         val sportBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_sport)
         binding.sportsBlock.startAnimation(sportBlockAnim)
-
-        val childrenBlockAnim = AnimationUtils.loadAnimation(context, R.anim.move_children)
-        binding.childrenBlock.startAnimation(childrenBlockAnim)
 
         val backButtonAnim = AnimationUtils.loadAnimation(context, R.anim.move_ltr)
         binding.backAction.startAnimation(backButtonAnim)
