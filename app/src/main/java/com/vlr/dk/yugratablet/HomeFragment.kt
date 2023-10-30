@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.Handler
+import android.os.SystemClock
 import android.view.GestureDetector
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +17,8 @@ import com.vlr.dk.yugratablet.databinding.HomeFragmentBinding
 import com.vlr.dk.yugratablet.gesture.CustomGestureListener
 import com.vlr.dk.yugratablet.utils.DeviceDimensionsHelper
 
-private const val DELAY = 2000L
+private const val DELAY = 800L
+private var mLastClickTime: Long = 0
 
 class HomeFragment : Fragment() {
     private var _binding: HomeFragmentBinding? = null
@@ -109,6 +111,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun clickAction(actionView: View, destinationId: Int) {
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+            return
+        }
+        mLastClickTime = SystemClock.elapsedRealtime();
+
         animation()
         Handler().postDelayed({
             actionView.findNavController().navigate(destinationId)
