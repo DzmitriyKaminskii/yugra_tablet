@@ -17,8 +17,8 @@ private val titleList = listOf(
 )
 
 private val contentResId = listOf(
-    R.drawable.cr1,
-    R.drawable.cr3
+    R.drawable.sport,
+    R.drawable.med
 )
 
 private var resId: Int? = null
