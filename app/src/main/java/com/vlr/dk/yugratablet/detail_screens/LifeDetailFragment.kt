@@ -1,6 +1,7 @@
 package com.vlr.dk.yugratablet.detail_screens
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +22,7 @@ private val contentResId = listOf(
     R.drawable.med,
     R.drawable.sport,
     R.drawable.trans,
-    R.drawable.med
+    R.drawable.obr
 )
 
 private var resId: Int? = null
@@ -50,6 +51,7 @@ class LifeDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.scrollView.isSmoothScrollingEnabled = true
 
         this.updateUI()
         bindingAction()
@@ -60,6 +62,9 @@ class LifeDetailFragment : Fragment() {
             binding.navTitle.text = titleList[it]
             binding.mainImageBlock.setImageResource(contentResId[it])
         }
+        Handler().postDelayed({
+            binding.scrollView.smoothScrollTo(0, 0)
+        }, 100)
     }
 
     private fun moveBack() {

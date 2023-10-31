@@ -1,13 +1,13 @@
 package com.vlr.dk.yugratablet.detail_screens
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.vlr.dk.yugratablet.R
-import com.vlr.dk.yugratablet.databinding.LifeDetailFragmentBinding
 import com.vlr.dk.yugratablet.databinding.RestDetailFragmentBinding
 import com.vlr.dk.yugratablet.utils.RES_ID
 
@@ -17,8 +17,8 @@ private val titleList = listOf(
 )
 
 private val contentResId = listOf(
-    R.drawable.sport,
-    R.drawable.med
+    R.drawable.tur,
+    R.drawable.cult
 )
 
 private var resId: Int? = null
@@ -47,6 +47,7 @@ class RestDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.scrollView.isSmoothScrollingEnabled = true
 
         this.updateUI()
         bindingAction()
@@ -57,6 +58,9 @@ class RestDetailFragment : Fragment() {
             binding.navTitle.text = titleList[it]
             binding.mainImageBlock.setImageResource(contentResId[it])
         }
+        Handler().postDelayed({
+            binding.scrollView.smoothScrollTo(0, 0)
+        }, 100)
     }
 
     private fun moveBack() {
